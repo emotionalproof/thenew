@@ -1,4 +1,4 @@
-class CreateActionPost < ActiveRecord::Migration[6.0]
+class CreateActionPosts < ActiveRecord::Migration[6.0]
   def change
     create_table :action_posts do |t|
       t.string :title
