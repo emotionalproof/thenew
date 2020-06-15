@@ -1,0 +1,6 @@
+<h1>user page</h1>
+
+<% @user.action_posts.each do |post| %>
+<%= post.title %>
+<img src= <%= post.img_url %> alt="post_img">
+<% end %>
