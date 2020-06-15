@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  resources :users, only:[:show, :new, :edit, :update]
+  resources :users, only:[:show, :new, :create, :edit, :update]
   resources :user_messages
   resources :user_categories
   resources :messages
