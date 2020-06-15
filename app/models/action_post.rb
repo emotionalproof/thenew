@@ -1,0 +1,2 @@
+class ActionPost < ApplicationRecord
+end
