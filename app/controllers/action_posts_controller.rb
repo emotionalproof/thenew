@@ -25,9 +25,8 @@ class ActionPostsController < ApplicationController
     end
 
     def destroy
-        @action_post.def destroy
-            redirect_to action_posts_path
-        end
+        @action_post.destroy
+        redirect_to action_posts_path
     end
 
     private
