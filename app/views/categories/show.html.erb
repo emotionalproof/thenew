@@ -1,0 +1,5 @@
+<h1><%= @category.name %></h1>
+
+<% @category.action_posts.each do |post| %>
+<img src="<%= post.first.img_url %>" alt="first post image">
+<% end %>

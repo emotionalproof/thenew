@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :users, only:[:show, :new, :edit, :update]
   resources :user_messages
-  resources :user_categories
+  resources :user_categories, only:[:index, :show]
   resources :messages
   resources :follows
   resources :comments
