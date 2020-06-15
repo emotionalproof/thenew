@@ -1,2 +1,3 @@
 class UserMessagesController < ApplicationController
+    
 end

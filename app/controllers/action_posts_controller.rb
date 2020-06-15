@@ -1,2 +1,3 @@
 class ActionPostsController < ApplicationController
+
 end
