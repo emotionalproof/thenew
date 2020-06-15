@@ -1,0 +1,7 @@
+<h1>Action Post List</h1>
+
+<%= @action_posts.each do |post| %>
+<%= post.title %>
+<img src= <%= post.img_url %> alt="post_img">
+<% end %>
+

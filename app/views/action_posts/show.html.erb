@@ -1,0 +1,10 @@
+<h1>post show</h1>
+
+<%= @action_post.title %>
+<%= @action_post.location %>
+<%= @action_post.content %>
+<%= @action_post.category.name %>
+<img src= <%= @action_post.img_url %> alt="post_img">
+
+<%= button_to "Edit Post", edit_action_post_path(@action_post), method: :get %>
+<%= button_to 'Delete Post', action_post_path(@action_post), method: :delete %>
