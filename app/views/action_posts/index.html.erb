@@ -83,7 +83,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
 
   <!-- First Photo Grid-->
   <div class="w3-row-padding w3-padding-16 w3-center" id="food">
-  <%= @action_posts.each do |post| %>
+  <% @action_posts.each do |post| %>
     <div class="w3-quarter">
       <%= link_to post.title, post %>
       <div style="width: 300px; height: 300px; overflow: hidden">
@@ -93,7 +93,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
   <% end %>
   </div><br>
     
-<%= @action_posts.each do |post| %>
+<% @action_posts.each do |post| %>
      <div class="box">
         <div style="width: 300px; height: 300px; overflow: hidden"><img src= <%= post.img_url %> alt="post image" style="width:100%" width="300"></div>
       </div>
@@ -170,7 +170,7 @@ function w3_close() {
 
 </body>
 
-<%= @action_posts.each do |post| %>
+<% @action_posts.each do |post| %>
      <div class="box">
         <div style="width: 300px; height: 300px; overflow: hidden"><img src= <%= post.img_url %> alt="post image" style="width:100%" width="300"></div>
       </div>
