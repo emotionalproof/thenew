@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_15_224205) do
+ActiveRecord::Schema.define(version: 2020_06_16_150629) do
 
   create_table "action_posts", force: :cascade do |t|
     t.string "title"
@@ -69,6 +69,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_224205) do
     t.string "user_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "password_digest"
   end
 
 end

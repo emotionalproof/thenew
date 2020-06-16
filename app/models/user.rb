@@ -1,6 +1,6 @@
 class User < ApplicationRecord
     has_secure_password
-    
+
     has_many :action_posts
     has_many :comments
     has_many :user_categories
@@ -16,4 +16,8 @@ class User < ApplicationRecord
     has_many :receiver, through: :receiving_users
     has_many :sending_users, foreign_key: :receiver_id, class_name: 'UserMessages'
     has_many :sender, through: :sending_users
+
+    def name
+        "#{self.first_name} #{self.last_name}"
+    end
 end

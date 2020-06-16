@@ -6,13 +6,13 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-User.destroy_all
-Category.destroy_all
-ActionPost.destroy_all
 
-User.create(first_name: "Jim", last_name: "Halpert", email: "jim@dundermifflin.com", user_name: 'big_tuna', img_url: "https://s-i.huffpost.com/gen/2028878/images/n-UPROXX-628x314.jpg")
-User.create(first_name: "Michael", last_name: "Scott", email: "michael@dundermifflin.com", user_name: 'prison_mike', img_url: "https://i2.wp.com/mtncatholic.com/wp-content/uploads/2016/10/6357600113572837231773916132_michael-scott-s-top-tantrums.png?fit=500%2C359")
-User.create(first_name: "Dwight", last_name: "Schrute", email: "dwight@dundermifflin.com", user_name: 'assistant_regional_manager', img_url: "https://typeset-beta.imgix.net/rehost/2016/10/31/dfe8a990-943e-44fc-a613-f6a3c7aaedff.jpg?w=970&h=582&fit=crop&crop=faces&auto=format&q=70")
+# Category.destroy_all
+# ActionPost.destroy_all
+
+# User.create(first_name: "Jim", last_name: "Halpert", email: "jim@dundermifflin.com", user_name: 'big_tuna', img_url: "https://s-i.huffpost.com/gen/2028878/images/n-UPROXX-628x314.jpg")
+# User.create(first_name: "Michael", last_name: "Scott", email: "michael@dundermifflin.com", user_name: 'prison_mike', img_url: "https://i2.wp.com/mtncatholic.com/wp-content/uploads/2016/10/6357600113572837231773916132_michael-scott-s-top-tantrums.png?fit=500%2C359")
+# User.create(first_name: "Dwight", last_name: "Schrute", email: "dwight@dundermifflin.com", user_name: 'assistant_regional_manager', img_url: "https://typeset-beta.imgix.net/rehost/2016/10/31/dfe8a990-943e-44fc-a613-f6a3c7aaedff.jpg?w=970&h=582&fit=crop&crop=faces&auto=format&q=70")
 
 Category.create(name: 'Food', tag: '#food')
 Category.create(name: 'Causes', tag: '#causes')
