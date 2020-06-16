@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
-  resources :users, only:[:show, :new, :create, :edit, :update]
+  resources :users
   resources :user_messages
   resources :user_categories
   resources :messages
   resources :follows
   resources :comments
-  resources :categories, only:[:index, :show]
+  resources :categories
   resources :action_posts #only:[:index, :show, :new, :create, :edit, :update, :destroy]
 
   get '/login' => 'sessions#new'

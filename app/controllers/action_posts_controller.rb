@@ -13,7 +13,10 @@ class ActionPostsController < ApplicationController
     end
 
     def create
-        action_post = ActionPost.create(action_post_params)
+        action_post = ActionPost.new(action_post_params)
+        action_post.user_id = session[:user_id]
+        action_post.save
+
         redirect_to action_post_path(action_post.id)
     end
 
