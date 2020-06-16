@@ -10,6 +10,19 @@
   </head>
 
   <body>
+    <ul>
+
+      <li><%= link_to 'Post Home', action_posts_path %></li>
+      <li><%= link_to 'New Post', new_action_post_path %></li>
+
+      <% if @current_user %>
+        <li class='right'> Welcome <%=  @current_user.user_name %></li>                    
+        <li class='right'><%= link_to "Log-Out", logout_path, method: :delete %></li>
+      <% else %>
+        <li class='right'><%= link_to 'Sign-up', new_user_path %></li>
+        <li class='right'><%= link_to 'Login', new_login_path %></li>
+      <% end %>
+    </ul>
     <%= yield %>
   </body>
 </html>

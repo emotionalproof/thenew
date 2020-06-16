@@ -8,10 +8,19 @@ class UsersController < ApplicationController
     end
 
     def create
-        @user = User.create(user_params)
-        # return redirect_to controller: 'users', action: 'new' unless @user.save
-        session[:user_id] = @user.id
-        redirect_to user_path(@user.id)
+        user = User.create(user_params)
+        # # return redirect_to controller: 'users', action: 'new' unless @user.save
+        # session[:user_id] = @user.id
+        # redirect_to user_path(@user.id)
+
+        if user.valid? 
+            session[:user_id] = user.id
+            redirect_to user_path(@user.id)
+           else
+             flash[:user_errors] = user.errors.full_messages
+       
+             redirect_to new_user_path 
+           end 
     end
 
     def edit
