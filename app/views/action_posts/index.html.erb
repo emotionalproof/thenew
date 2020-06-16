@@ -40,6 +40,18 @@
   padding: 20px;
   text-align: center;
 }
+   .box {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .box>* {
+            flex: 1 1 auto;
+          }
+          .hide {
+            visibility: collapse;
+          }
+      
+  
 
 .container:hover .overlay {
   opacity: 1;
@@ -79,9 +91,15 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       </div>
     </div>
   <% end %>
-  </div>
+  </div><br>
     
+<%= @action_posts.each do |post| %>
+     <div class="box">
+        <div style="width: 300px; height: 300px; overflow: hidden"><img src= <%= post.img_url %> alt="post image" style="width:100%" width="300"></div>
+      </div>
+       <% end %>
  
+
  
 
 
@@ -151,3 +169,9 @@ function w3_close() {
 </script>
 
 </body>
+
+<%= @action_posts.each do |post| %>
+     <div class="box">
+        <div style="width: 300px; height: 300px; overflow: hidden"><img src= <%= post.img_url %> alt="post image" style="width:100%" width="300"></div>
+      </div>
+       <% end %>
