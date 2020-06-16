@@ -9,6 +9,7 @@ class ActionPostsController < ApplicationController
 
     def new
         @action_post = ActionPost.new
+        @categories = Category.all
     end
 
     def create

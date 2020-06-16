@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   resources :follows
   resources :comments
   resources :categories, only:[:index, :show]
-  resources :action_posts, only:[:index, :show, :new, :create, :edit, :update, :destroy]
+  resources :action_posts #only:[:index, :show, :new, :create, :edit, :update, :destroy]
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
