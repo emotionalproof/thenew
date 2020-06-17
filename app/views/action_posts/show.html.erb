@@ -6,5 +6,9 @@
 <%= @action_post.category.name %>
 <img src= <%= @action_post.img_url %> alt="post_img">
 
+<h3>Comments</h3>
+<%= render partial: 'comments/form' %>
+<%= render partial: 'action_posts/comment', collection: @action_post.comments.reverse %>
+
 <%= button_to "Edit Post", edit_action_post_path(@action_post), method: :get %>
 <%= button_to 'Delete Post', action_post_path(@action_post), method: :delete %>

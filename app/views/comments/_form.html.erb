@@ -1,0 +1,11 @@
+<h3>Post a Comment</h3>
+<%= form_for [ @action_post, @comment ] do |f| %>
+
+
+    <%= f.text_area :content %>
+
+   
+    
+    <%= f.submit 'Comment' %>
+  
+<% end %>
