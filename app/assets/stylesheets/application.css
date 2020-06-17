@@ -19,6 +19,43 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif}
 
 *{box-sizing: border-box;}
 
+.custom-nav-bar {
+margin-left: 0px
+
+}
+
+#mySidebar {
+  display:none;
+  z-index: 2;
+  width: 5%;
+  min-width: fit-content;
+  height: fit-content;
+}
+.custom-top {
+  height: 80px 
+}
+
+.custom-nav-click {
+  height: 20px
+}
+#inner-custom-top {
+  max-width:1200px;
+  margin:auto
+}
+
+.top-text {
+  height: 75px;
+    border-style: solid;
+  border-width: .1px;
+  border-color: orange;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+
+#inner-custom-top text {
+  top: 50%
+}
+
 .image-overlay-container {
   position: relative;
   width: 50%;
@@ -34,8 +71,9 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif}
   padding: 5%;
   border-style: dotted;
   border-width: .1px;
-  border-color: silver;
+  border-color: orange;
   overflow: hidden;
+  margin-bottom: 5%;
 }
 
 
@@ -58,10 +96,12 @@ body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif}
     padding: 0px;
     text-align: left;
     font-family: "Comic Sans MS", cursive, sans-serif;
-
 }
 
-.overlay text
+.overlay text {
+
+  left: 5%
+}
     
     
 .overlay a:link, a:visited, a:hover, a:active{
