@@ -5,6 +5,8 @@ class ActionPostsController < ApplicationController
     end
 
     def show
+        @comment = Comment.new
+        @comment.action_post_id = @action_post.id
     end
 
     def new

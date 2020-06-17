@@ -4,10 +4,11 @@ Rails.application.routes.draw do
   resources :user_categories
   resources :messages
   resources :follows
-  resources :comments
+  # resources :comments
   resources :categories
-  resources :action_posts #only:[:index, :show, :new, :create, :edit, :update, :destroy]
-
+  resources :action_posts do
+    resources :comments
+  end
   # get '/login' => 'sessions#new'
   # post '/login' => 'sessions#create'
   # post '/logout' => 'sessions#destroy'
