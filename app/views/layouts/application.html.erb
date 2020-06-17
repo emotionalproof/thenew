@@ -89,6 +89,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <% if @current_user %>
         <li class='right'> Welcome <%=  @current_user.user_name %></li>                    
         <li class='right'><%= link_to "Log-Out", logout_path, method: :delete %></li>
+        <li class='right'><%= link_to "Messaging", conversations_path %></li>
       <% else %>
         <li class='right'><%= link_to 'Sign-up', new_user_path %></li>
         <li class='right'><%= link_to 'Login', new_login_path %></li>
