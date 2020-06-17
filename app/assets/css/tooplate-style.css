@@ -720,7 +720,7 @@ iframe { max-width: 100%; }
     .tm-welcome-section { height: 70vh; }
 
     .tm-about-col-left { margin-bottom: 20px; }
-    .tm-about-text { padding: 50px; }
+    .tm-about-text { padding: 20px; }
 
     .tm-about-text, .tm-about-img {
         margin-left: auto;

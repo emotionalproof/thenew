@@ -1,10 +1,22 @@
+<head>
+<style>
+div {
+ 
+  margin: 10px 50px ;
+}
+</style>
+</head>
 <h1>post show</h1>
 
-<%= @action_post.title %>
-<%= @action_post.location %>
-<%= @action_post.content %>
-<%= @action_post.category.name %>
-<img src= <%= @action_post.img_url %> alt="post_img">
+<div>
+<div><%= @action_post.location %></div>
+<div><%= @action_post.content %></div>
+<div><%= @action_post.category.name %></div>
+<div><img src= <%= @action_post.img_url %> alt="post_img"></div>
 
-<%= button_to "Edit Post", edit_action_post_path(@action_post), method: :get %>
-<%= button_to 'Delete Post', action_post_path(@action_post), method: :delete %>
+<div><%= button_to "Edit Post", edit_action_post_path(@action_post), method: :get %></div>
+<div><%= button_to 'Delete Post', action_post_path(@action_post), method: :delete %></div>
+
+
+
+ 
