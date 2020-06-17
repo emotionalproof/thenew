@@ -13,3 +13,76 @@
  *= require_tree .
  *= require_self
  */
+
+body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}
+
+*{box-sizing: border-box;}
+
+.image-overlay-container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.image {
+
+  border-radius: 25px;
+  width: 200%;
+  height: 100%;
+  display: inline;
+  padding: 5%;
+  border-style: dotted;
+  border-width: .1px;
+  border-color: silver;
+  overflow: hidden;
+}
+
+
+
+.overlay {
+    position: absolute;
+    bottom: 37px;
+    background: rgb(0, 0, 0);
+    background: rgba(0, 0, 0, 0.5);
+    color: #f1f1f1;
+    width: 187%;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    left: 6px;
+    transition: .5s ease;
+    opacity: 0;
+    color: white;
+    font-size: 20px;
+    padding: 0px;
+    text-align: left;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+
+}
+    
+    
+.overlay a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+}
+
+
+
+   .box {
+            display: flex;
+            flex-wrap: wrap;
+          }
+          .box>* {
+            flex: 1 1 auto;
+          }
+          .hide {
+            visibility: collapse;
+          }
+      
+  
+
+.image-overlay-container:hover .overlay {
+  opacity: 1;
+}
+body,h1,h2,h3,h4,h5,h6 {font-family: Arial, Helvetica, sans-serif}
+.w3-bar-block .w3-bar-item {padding:20px}

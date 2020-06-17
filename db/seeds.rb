@@ -6,9 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all
+Category.destroy_all
+ActionPost.destroy_all
 
-# Category.destroy_all
-# ActionPost.destroy_all
+
 10.times do
 User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, password: "password", email: "jim@dundermifflin.com", user_name: Faker::Twitter.screen_name, img_url: "https://s-i.huffpost.com/gen/2028878/images/n-UPROXX-628x314.jpg")
 User.create(first_name: Faker::Name.first_name, last_name: Faker::Name.last_name, password: "password",  email: "michael@dundermifflin.com", user_name: Faker::Twitter.screen_name, img_url: "https://i2.wp.com/mtncatholic.com/wp-content/uploads/2016/10/6357600113572837231773916132_michael-scott-s-top-tantrums.png?fit=500%2C359")
