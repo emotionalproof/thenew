@@ -1,29 +1,33 @@
-<head>
-<style>
-div {
- 
-  margin: 10px 50px ;
-}
-</style>
-</head>
-<h1>post show</h1>
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:10px">
+
+<h1>ACTION TIME!</h1>
 
 <div>
-<div><%= @action_post.location %></div>
-<div><%= @action_post.content %></div>
-<div><%= @action_post.category.name %></div>
-<div><img src= <%= @action_post.img_url %> alt="post_img"></div>
+<div class="image-overlay-container" id="show_img">
+      <img src= <%= @action_post.img_url %> alt="post image" class="show-image" >
+    </div>
+    </div>
 
+<div class="title"><%= @action_post.title %></div><br><br>
+<div class="location"><%= @action_post.location %></div><br><br>
+<div class="category"><%= @action_post.category.name %></div><br><br>
+<p class="content"><%= @action_post.content %></p><br><br>
+
+
+<% if @action_post.user.id != session[:user_id] %>
+  <div></div>
+<% else %>
 <div><%= button_to "Edit Post", edit_action_post_path(@action_post), method: :get %></div>
 <div><%= button_to 'Delete Post', action_post_path(@action_post), method: :delete %></div>
-
+<%end %>
+<br>
+<div class="container-fluid" border-style="solid">
 <h3>Comments</h3>	
-<%= render partial: 'comments/form' %>	
-<%= render partial: 'action_posts/comment', collection: @action_post.comments.reverse %>	
-
-<%= button_to "Edit Post", edit_action_post_path(@action_post), method: :get %>	
-<%= button_to 'Delete Post', action_post_path(@action_post), method: :delete %>
+<%= render partial: 'comments/form' %>	<br>
+<%= render partial: 'action_posts/comment', collection: @action_post.comments.reverse %>
+</div>
 
 
 
  
+</div>
