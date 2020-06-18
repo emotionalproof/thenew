@@ -6,7 +6,7 @@
 <% end %>
 
 <div id="users">
-<% @users.each do |user| %>
+<% @all_except_me.each do |user| %>
   <%= user.name%>
       <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
       <div class="clear"></div>
