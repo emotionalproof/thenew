@@ -1,16 +1,48 @@
-<h1>user page</h1>
-<img src= <%= @user.img_url %> alt="user_img">
 
-<h3>My post: <% @user.action_posts.each do |post| %></h3>
-<%= post.title %>
-<img src= <%= post.img_url %> alt="post_img">
+<style>
+.user-show {
+  margin: 0% 10%
+
+}
+</style>
+<div class=user-show>
+<% if @current_user.id == @user.id %>
+<div class="css-input">Your Dashboard</div>
+<% else %>
+<div class="css-input"><%= @user.first_name.titleize %>'s Dashboard</div>
 <% end %>
+<br><br>
+<img src= <%= @user.img_url %> alt="user_img" class="profile-image">
+
+<div class="w3-main w3-content w3-padding" style="max-width:1200px;margin-top:10px">
+<% if @current_user.id == @user.id %>
+<h2>My Action Cards</h2>
+<% else %>
+<div><%= @user.first_name %>'s' Action Cards</div>
+<% end %>
+  <!-- First Photo Grid-->
+  <div class="w3-row-padding w3-padding-16 w3-center" id="post">
+  <% @user.action_posts.sort {|a,b| b.id <=> a.id}.each do |post| %>
+    <div class="w3-quarter">
+    <div class="image-overlay-container">
+      <img src= <%= post.img_url %> alt="post image" class="image" >
+      <% if @current_user %>
+      <div class="overlay"><%= link_to simple_format("#{post.title.titleize}\n#{post.category.tag.downcase}"), post%></div>
+      <% else %>
+      <div class="overlay"><%= link_to simple_format("#{post.title.titleize}\n#{post.category.tag.downcase}"), new_login_path%></div>
+      <% end %>
+    </div>
+    </div>
+  <% end %>
+  
+</div>
 
 
-<%= link_to "Action Posts", action_posts_path %>
 
+
+<% if @current_user.id == @user.id %>
 <h2>My Friends</h2>
-<% if @user.friendships.nil? %>
+<% if @user.friendships.empty? %>
 <p><%= link_to "Make a connection with a current user", users_path %> or 
 <%= link_to "Pick an Action Card and send a friend request to the author", action_posts_path %></p>
 <% else %>
@@ -26,5 +58,11 @@
 </ul>
 <% end %>
 
+<p><%= link_to "Edit Your Profile", edit_user_path(@current_user.id)  %> </p>
 
-<p><%= link_to "Find Friends", users_path %></p>
+<% else %>
+<h4><%= link_to "Click Here", friendships_path(:friend_id => @user), :method => :post %> to add <%= @user.first_name %> to your friend list.</h4>
+      <div class="clear">
+<% end %>
+
+</div>

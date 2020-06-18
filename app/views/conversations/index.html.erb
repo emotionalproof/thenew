@@ -1,5 +1,16 @@
+
+<style>
+.conversations {
+  margin: 0% 10%
+
+}
+</style>
+<div class=conversations>
+
+<div class="css-input">Messages</div>
+<br><br>
 <div class="ui segment">
-    <h3>Mailbox</h3>
+    <h3>Active Conversations</h3>
   
     <div class="ui list">
       <div class="item">
@@ -10,7 +21,7 @@
             <% else %>
               <% receiver = User.find(conversation.sender_id) %>
             <% end %>
-            <%= link_to receiver.first_name, conversation_messages_path(conversation)%>
+            <%= link_to receiver.first_name, conversation_messages_path(conversation)%><br>
           <% end %>
         <% end %>
       </div>
@@ -24,3 +35,5 @@
   <%= friendship.friend.name %>
   <%= link_to 'Message me!', conversations_path(sender_id: @current_user.id, receiver_id: friendship.friend.id), method: 'post'%>
 <% end %>
+
+</div>

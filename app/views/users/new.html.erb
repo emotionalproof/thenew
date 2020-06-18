@@ -1,8 +1,15 @@
-<h1>create new user</h1>
+<style>
+.sign-up {
+  margin: 0% 10%
+}
+</style>
 
+<div class="sign-up">
+<div class="css-input">Sign-up for TheNew</div>
 
+<br><br><br>
 </body>
-
+<h4>
 <%= form_for :user, url: '/users' do |f| %>
 <%= f.label :first_name %><br>
 <%= f.text_field :first_name, :size=>"50" %><br><br>
@@ -29,4 +36,9 @@
 
 <%= f.submit %>
 
+</h4>
+
 <% end %>
+
+<h4>Already a member? <%= link_to "Click here", new_login_path %> to go back to the login page.</h4>
+</div>

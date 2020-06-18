@@ -1,16 +1,28 @@
-  
-<h1>LOGIN Page</h1>
+<style>
+.login {
+  margin: 0% 10%
+
+}
+</style>
+<div class=login>
+<div class="css-input">Login to TheNew</div>
+
+<br><br>
 
 <% if flash[:error] %>
   <h1 styls='color: red;'><%= flash[:error] %></h1>
 <% end %>
 
 <%= form_for :session, url: login_path do |f| %>
-  <%= f.label :user_name %>
-  <%= f.text_field :user_name %>
+  <h3><%= f.label :user_name %>
+  <%= f.text_field :user_name %></h3>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+  <h3><%= f.label :password %>
+  <%= f.password_field :password %></h3>
 
-  <%= f.submit "Login" %>
+  <h3><%= f.submit "Login" %></h3>
 <% end %>
+<br><br>
+
+<h3>Not a Member? <%= link_to "Click here", new_user_path %> to sign-up.</h3>
+</div>

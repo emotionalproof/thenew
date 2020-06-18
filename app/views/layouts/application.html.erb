@@ -28,9 +28,11 @@
    <% if @current_user %>
   <p class="w3-bar-item w3-button">Hi <%=  @current_user.first_name %>!</p>  
   <p class="w3-bar-item w3-button">_______________</p>  
+  <a href="/users/<%= @current_user.id %>" onclick="w3_close()" class="w3-bar-item w3-button">My Action Dashboard</a>
   <a href="/action_posts" onclick="w3_close()" class="w3-bar-item w3-button">Try Something New Today</a>
   <a href="/action_posts/new" onclick="w3_close()" class="w3-bar-item w3-button">Share an Action Card</a>
   <a href="/conversations" onclick="w3_close()" class="w3-bar-item w3-button">Send a Message</a>  
+  <a href="/users/" onclick="w3_close()" class="w3-bar-item w3-button">Make a connection</a>  
   <a href="/sessions/logout" rel="nofollow" data-method="delete" onclick="w3_close()" class="w3-bar-item w3-button" >Logout</a> 
   <% else %>
   <a href="/sessions/new" onclick="w3_close()" class="w3-bar-item w3-button">Login</a>  

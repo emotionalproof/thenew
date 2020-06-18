@@ -1,13 +1,28 @@
-<h1>edit user info</h1>
+
+<style>
+.edit-profle {
+  margin: 0% 10%
+
+}
+</style>
+<div class=edit-profile>
+
+<div class="css-input"><%= Edit Profile</div>
+<br><br>
 
 <%= form_for @user do |f| %>
 
-<%= f.label :password %>
-<%= f.text_field :password %>
+<%= f.label :first_name %><br>
+<%= f.text_field :first_name, :size=>"50" %><br><br>
 
-<%= f.label :img_url %>
-<%= f.text_field :img_url %>
+<%= f.label :last_name %><br>
+<%= f.text_field :last_name, :size=>"50" %><br><br>
+
+<%= f.label :img_url %><br>
+<%= f.text_field :img_url, :size=>"50" %><br><br>
 
 <%= f.submit %>
 
 <% end %>
+
+</div>
