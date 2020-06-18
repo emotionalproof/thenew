@@ -10,6 +10,10 @@
 <%= link_to "Action Posts", action_posts_path %>
 
 <h2>My Friends</h2>
+<% if @user.friendships.nil? %>
+<p><%= link_to "Make a connection with a current user", users_path %> or 
+<%= link_to "Pick an Action Card and send a friend request to the author", action_posts_path %></p>
+<% else %>
 <ul>
     <% @user.friendships.each do |friendship| %>
     <li>
@@ -20,5 +24,7 @@
     </li>
   <% end %>
 </ul>
+<% end %>
+
 
 <p><%= link_to "Find Friends", users_path %></p>
