@@ -3,6 +3,8 @@ class UsersController < ApplicationController
 
     def index
         @users = User.all
+    
+        @all_except_me = User.all_except(@current_user)
     end
 
     def show

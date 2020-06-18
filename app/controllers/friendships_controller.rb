@@ -4,7 +4,7 @@ class FriendshipsController < ApplicationController
         if @friendship.valid? && @friendship.save
           redirect_to user_path(@current_user.id)
         else
-          flash[:errors] = @friendship.errors.full_messages
+          flash[:errors] = @friendship.errors.full_messages #"You are already friends with this person"
           redirect_to users_path
         end
       end
