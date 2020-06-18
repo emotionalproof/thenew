@@ -1,0 +1,15 @@
+<h1>User List</h1>
+<% if flash[:errors] %>
+<% flash[:errors].each do |error| %>
+<h3><%= error %></h3>
+<% end %>
+<% end %>
+
+<div id="users">
+<% @users.each do |user| %>
+  <%= user.name%>
+      <%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post %>
+      <div class="clear"></div>
+
+<% end %>
+</div>

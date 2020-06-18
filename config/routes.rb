@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   # resources :user_messages
   resources :user_categories
   # resources :messages
-  resources :follows
+  resources :friendships
+  # resources :follows
   # resources :comments
   resources :categories
   resources :action_posts do

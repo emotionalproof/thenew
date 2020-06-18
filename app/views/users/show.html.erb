@@ -8,3 +8,17 @@
 
 
 <%= link_to "Action Posts", action_posts_path %>
+
+<h2>My Friends</h2>
+<ul>
+    <% @user.friendships.each do |friendship| %>
+    <li>
+      <%= friendship.friend.name %>
+      <%= link_to 'Message me!', conversations_path(sender_id: @current_user.id, receiver_id: friendship.friend.id), method: 'post'%>
+      (<%= link_to "remove", friendship, :method => :delete %>)
+    
+    </li>
+  <% end %>
+</ul>
+
+<p><%= link_to "Find Friends", users_path %></p>

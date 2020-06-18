@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_06_17_022654) do
+ActiveRecord::Schema.define(version: 2020_06_18_094754) do
 
   create_table "action_posts", force: :cascade do |t|
     t.string "title"
@@ -41,9 +41,9 @@ ActiveRecord::Schema.define(version: 2020_06_17_022654) do
     t.integer "receiver_id"
   end
 
-  create_table "follows", force: :cascade do |t|
-    t.integer "follower_id"
-    t.integer "followee_id"
+  create_table "friendships", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "friend_id"
   end
 
   create_table "messages", force: :cascade do |t|
